@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ذاتی معلومات فارم لاہور سٹی آفس | دعوت اسلامی</title>
-    <!-- Font Awesome CDN (Primary + Backup) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
     
     <!-- Libraries for Export -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
@@ -28,7 +25,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Noto Nastaliq Urdu', 'Poppins', sans-serif;
+            font-family: 'Noto Nastaliq Urdu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
@@ -37,6 +34,39 @@
             line-height: 1.8;
             direction: rtl;
         }
+
+        /* Native CSS Icons */
+        .ico {
+            display: inline-block;
+            margin-left: 6px;
+            font-style: normal;
+        }
+        .ico-mosque::before { content: "🕌"; }
+        .ico-chart::before { content: "📊"; }
+        .ico-card::before { content: "🪪"; }
+        .ico-user-pen::before { content: "✍️"; }
+        .ico-map::before { content: "📍"; }
+        .ico-tie::before { content: "👔"; }
+        .ico-user::before { content: "👤"; }
+        .ico-phone::before { content: "📞"; }
+        .ico-cnic::before { content: "📜"; }
+        .ico-degree::before { content: "🎓"; }
+        .ico-quran::before { content: "📖"; }
+        .ico-cal::before { content: "📅"; }
+        .ico-cake::before { content: "🎂"; }
+        .ico-job::before { content: "💼"; }
+        .ico-blood::before { content: "🩸"; }
+        .ico-ring::before { content: "💍"; }
+        .ico-history::before { content: "📜"; }
+        .ico-star::before { content: "⭐"; }
+        .ico-house::before { content: "🏠"; }
+        .ico-lang::before { content: "🗣️"; }
+        .ico-img::before { content: "🖼️"; }
+        .ico-save::before { content: "💾"; }
+        .ico-down::before { content: "📥"; }
+        .ico-excel::before { content: "📊"; }
+        .ico-pdf::before { content: "📄"; }
+        .ico-trash::before { content: "🗑️"; }
 
         header {
             background-color: var(--primary-color);
@@ -137,8 +167,6 @@
             align-items: center;
             gap: 8px;
         }
-
-        .form-group label i { color: var(--primary-color); }
 
         .form-group input, .form-group textarea, .form-group select {
             width: 100%;
@@ -418,73 +446,73 @@
 <body>
 
     <header>
-        <div class="logo-title"><i class="fa-solid fa-mosque"></i> دعوت اسلامی</div>
-        <div class="dept-title"><i class="fa-solid fa-chart-line"></i> شعبہ کارکردگی</div>
+        <div class="logo-title"><i class="ico ico-mosque"></i> دعوت اسلامی</div>
+        <div class="dept-title"><i class="ico ico-chart"></i> شعبہ کارکردگی</div>
     </header>
 
     <section class="hero">
-        <h1><i class="fa-solid fa-id-card"></i> ذاتی معلومات فارم</h1>
+        <h1><i class="ico ico-card"></i> ذاتی معلومات فارم</h1>
         <div class="sub-title">لاہور سٹی آفس</div>
     </section>
 
     <div class="container">
         <!-- Form Section -->
         <div class="card">
-            <h2><span><i class="fa-solid fa-user-pen"></i> معلومات درج کریں</span></h2>
+            <h2><span><i class="ico ico-user-pen"></i> معلومات درج کریں</span></h2>
             <form id="dataForm" onsubmit="return false;">
                 <div class="form-grid">
                     <div class="form-group">
-                        <label><i class="fa-solid fa-map-location-dot"></i> یوسی / سب ٹاؤن:</label>
+                        <label><i class="ico ico-map"></i> یوسی / سب ٹاؤن:</label>
                         <input type="text" id="ucName" placeholder="مثال: یوسی جوہر ٹاؤن">
                     </div>
 
                     <div class="form-group">
-                        <label><i class="fa-solid fa-user-tie"></i> ذمہ داری :</label>
+                        <label><i class="ico ico-tie"></i> ذمہ داری (فالو اپ ذمہ دار):</label>
                         <input type="text" id="role" placeholder="مثال: یوسی نگران">
                     </div>
 
                     <div class="form-group">
-                        <label><i class="fa-solid fa-user"></i> 1. نام:</label>
+                        <label><i class="ico ico-user"></i> 1. نام:</label>
                         <input type="text" id="memberName" placeholder="مکمل نام درج کریں">
                     </div>
 
                     <div class="form-group">
-                        <label><i class="fa-solid fa-phone"></i> 2. رابطہ نمبر:</label>
+                        <label><i class="ico ico-phone"></i> 2. رابطہ نمبر:</label>
                         <input type="text" id="contactNo" placeholder="03001234567">
                     </div>
 
                     <div class="form-group">
-                        <label><i class="fa-solid fa-id-card"></i> 3. شناختی کارڈ نمبر (CNIC):</label>
+                        <label><i class="ico ico-cnic"></i> 3. شناختی کارڈ نمبر (CNIC):</label>
                         <input type="text" id="cnic" placeholder="3520200000000">
                     </div>
 
                     <div class="form-group">
-                        <label><i class="fa-solid fa-graduation-cap"></i> 4. دنیاوی تعلیم:</label>
+                        <label><i class="ico ico-degree"></i> 4. دنیاوی تعلیم:</label>
                         <input type="text" id="secularEdu" placeholder="مثال: Matric / BS">
                     </div>
 
                     <div class="form-group">
-                        <label><i class="fa-solid fa-book-quran"></i> 5. دینی تعلیم:</label>
+                        <label><i class="ico ico-quran"></i> 5. دینی تعلیم:</label>
                         <input type="text" id="religiousEdu" placeholder="مثال: درسِ نظامی / ناظرہ">
                     </div>
 
                     <div class="form-group">
-                        <label><i class="fa-solid fa-calendar-check"></i> 6. کس سال سے دعوت اسلامی کے ساتھ وابستہ ہیں؟:</label>
+                        <label><i class="ico ico-cal"></i> 6. کس سال سے دعوت اسلامی کے ساتھ وابستہ ہیں؟:</label>
                         <input type="text" id="associatedYear" placeholder="مثال: 2014 یا 5 سال">
                     </div>
 
                     <div class="form-group">
-                        <label><i class="fa-solid fa-cake-candles"></i> 9. عمر (سال):</label>
+                        <label><i class="ico ico-cake"></i> 9. عمر (سال):</label>
                         <input type="number" id="age" placeholder="مثال: 30">
                     </div>
 
                     <div class="form-group">
-                        <label><i class="fa-solid fa-briefcase"></i> 10. ذریعہ معاش:</label>
+                        <label><i class="ico ico-job"></i> 10. ذریعہ معاش:</label>
                         <input type="text" id="profession" placeholder="مثال: بزنس / ملازمت">
                     </div>
 
                     <div class="form-group">
-                        <label><i class="fa-solid fa-droplet"></i> 11. بلڈ گروپ:</label>
+                        <label><i class="ico ico-blood"></i> 11. بلڈ گروپ:</label>
                         <select id="bloodGroup">
                             <option value="-">منتخب کریں</option>
                             <option value="A+">A+</option>
@@ -499,7 +527,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label><i class="fa-solid fa-ring"></i> 12. ازدواجی حیثیت:</label>
+                        <label><i class="ico ico-ring"></i> 12. ازدواجی حیثیت:</label>
                         <select id="maritalStatus">
                             <option value="غیر شادی شدہ">غیر شادی شدہ</option>
                             <option value="شادی شدہ">شادی شدہ</option>
@@ -507,31 +535,31 @@
                     </div>
 
                     <div class="form-group full-width">
-                        <label><i class="fa-solid fa-history"></i> 7. سابقہ ذمہ داریاں:</label>
+                        <label><i class="ico ico-history"></i> 7. سابقہ ذمہ داریاں:</label>
                         <textarea id="pastRoles" rows="2" placeholder="کن کن ذمہ داریوں پر پہلے رہ چکے ہیں؟"></textarea>
                     </div>
 
                     <div class="form-group full-width">
-                        <label><i class="fa-solid fa-star"></i> 8. قابلیت/SKills:</label>
+                        <label><i class="ico ico-star"></i> 8. قابلیت/SKills:</label>
                         <textarea id="skills" rows="2" placeholder=" آپ کس کس کام میں ماہر ہیں؟ "></textarea>
                     </div>
 
                     <div class="form-group full-width">
-                        <label><i class="fa-solid fa-house-user"></i> 13. رہائشی ایڈریس:</label>
+                        <label><i class="ico ico-house"></i> 13. رہائشی ایڈریس:</label>
                         <input type="text" id="address" placeholder="مکمل پتہ">
                     </div>
 
                     <div class="form-group full-width">
-                        <label><i class="fa-solid fa-language"></i> 14. زبانیں:</label>
+                        <label><i class="ico ico-lang"></i> 14. زبانیں:</label>
                         <input type="text" id="languages" placeholder="اردو، پنجابی، انگریزی">
                     </div>
 
                     <div class="form-group full-width">
-                        <label><i class="fa-solid fa-image"></i> اپنی تصویر:</label>
+                        <label><i class="ico ico-img"></i> اپنی تصویر:</label>
                         <input type="file" id="userPhoto" accept="image/*">
                     </div>
 
-                    <button type="button" id="saveBtn" class="btn-submit" onclick="executeSave()"><i class="fa-solid fa-floppy-disk"></i> محفوظ کریں (Save Record)</button>
+                    <button type="button" id="saveBtn" class="btn-submit" onclick="executeSave()"><i class="ico ico-save"></i> محفوظ کریں (Save Record)</button>
                 </div>
             </form>
         </div>
@@ -539,27 +567,27 @@
         <!-- Preview Card Section -->
         <div class="card" id="profilePreviewCardSection" style="display: none;">
             <h2>
-                <span><i class="fa-solid fa-address-card"></i>حالیہ اینٹریز (مکمل ریکارڈ)</span>
-                <button class="btn-btn btn-pdf" onclick="downloadInfographicPNG()"><i class="fa-solid fa-download"></i> Download PNG</button>
+                <span><i class="ico ico-card"></i>حالیہ اینٹریز (مکمل ریکارڈ)</span>
+                <button class="btn-btn btn-pdf" onclick="downloadInfographicPNG()"><i class="ico ico-down"></i> Download PNG</button>
             </h2>
             
             <div class="infographic-wrapper" id="infographicExportArea">
                 <div class="infographic-container">
                     <div class="nodes-col">
                         <div class="node-box">
-                            <div class="node-title-ribbon ribbon-blue"><i class="fa-solid fa-phone"></i> رابطہ / CNIC:</div>
+                            <div class="node-title-ribbon ribbon-blue"><i class="ico ico-phone"></i> رابطہ / CNIC:</div>
                             <div class="node-value" id="previewPhoneCnic">-</div>
                         </div>
                         <div class="node-box">
-                            <div class="node-title-ribbon ribbon-orange"><i class="fa-solid fa-book-quran"></i> دینی تعلیم:</div>
+                            <div class="node-title-ribbon ribbon-orange"><i class="ico ico-quran"></i> دینی تعلیم:</div>
                             <div class="node-value" id="previewReligiousEdu">-</div>
                         </div>
                         <div class="node-box">
-                            <div class="node-title-ribbon ribbon-green"><i class="fa-solid fa-graduation-cap"></i> دنیاوی تعلیم:</div>
+                            <div class="node-title-ribbon ribbon-green"><i class="ico ico-degree"></i> دنیاوی تعلیم:</div>
                             <div class="node-value" id="previewSecularEdu">-</div>
                         </div>
                         <div class="node-box">
-                            <div class="node-title-ribbon ribbon-purple"><i class="fa-solid fa-briefcase"></i> ذریعہ معاش:</div>
+                            <div class="node-title-ribbon ribbon-purple"><i class="ico ico-job"></i> ذریعہ معاش:</div>
                             <div class="node-value" id="previewProfession">-</div>
                         </div>
                     </div>
@@ -575,19 +603,19 @@
 
                     <div class="nodes-col">
                         <div class="node-box">
-                            <div class="node-title-ribbon ribbon-blue"><i class="fa-solid fa-star"></i> صلاحیتیں:</div>
+                            <div class="node-title-ribbon ribbon-blue"><i class="ico ico-star"></i> صلاحیتیں:</div>
                             <div class="node-value" id="previewSkills">-</div>
                         </div>
                         <div class="node-box">
-                            <div class="node-title-ribbon ribbon-orange"><i class="fa-solid fa-clock-rotate-left"></i> دینی ماحول میں عرصہ:</div>
+                            <div class="node-title-ribbon ribbon-orange"><i class="ico ico-cal"></i> دینی ماحول میں عرصہ:</div>
                             <div class="node-value" id="previewYear">-</div>
                         </div>
                         <div class="node-box">
-                            <div class="node-title-ribbon ribbon-green"><i class="fa-solid fa-layer-group"></i> سابقہ ذمہ داریاں:</div>
+                            <div class="node-title-ribbon ribbon-green"><i class="ico ico-history"></i> سابقہ ذمہ داریاں:</div>
                             <div class="node-value" id="previewPastRoles">-</div>
                         </div>
                         <div class="node-box">
-                            <div class="node-title-ribbon ribbon-purple"><i class="fa-solid fa-location-dot"></i> ایڈریس:</div>
+                            <div class="node-title-ribbon ribbon-purple"><i class="ico ico-house"></i> ایڈریس:</div>
                             <div class="node-value" id="previewAddress">-</div>
                         </div>
                     </div>
@@ -603,11 +631,11 @@
         <!-- Table Card Section -->
         <div class="card">
             <h2>
-                <span><i class="fa-solid fa-list-check"></i>  درج شدہ معلومات </span> 
+                <span><i class="ico ico-chart"></i>  درج شدہ معلومات </span> 
                 <div class="btn-action-group">
-                    <button class="btn-btn btn-excel" onclick="downloadExcel()"><i class="fa-solid fa-file-excel"></i> Excel Export</button>
-                    <button class="btn-btn btn-pdf" onclick="exportPDF()"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
-                    <button class="btn-btn btn-clear" onclick="clearAllData()"><i class="fa-solid fa-trash"></i> تمام ڈیٹا ختم کریں</button>
+                    <button class="btn-btn btn-excel" onclick="downloadExcel()"><i class="ico ico-excel"></i> Excel Export</button>
+                    <button class="btn-btn btn-pdf" onclick="exportPDF()"><i class="ico ico-pdf"></i> Download PDF</button>
+                    <button class="btn-btn btn-clear" onclick="clearAllData()"><i class="ico ico-trash"></i> تمام ڈیٹا ختم کریں</button>
                 </div>
             </h2>
             <div class="data-table-container">
@@ -645,7 +673,7 @@
         const STORAGE_KEY = 'dawateislami_records_v5';
         
         // APNI GOOGLE APPS SCRIPT WEB APP URL YAHAN PASTE KAREIN:
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxLT3H8cR8ZjYn5M20Dr6wz9BhsmbJ8S1bX80JqTspXhdq0KY3yuBJoDFsKyK1I_gI/exec';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxLT3H8cR8ZjYn5M20Dr6wz9BhsmbJ8S1bX80JqTspXhdq0KY3yuBJoDFsKyK1I_gl/exec';
 
         window.onload = function() {
             renderTable();
@@ -679,7 +707,7 @@
         function executeSave() {
             const saveBtn = document.getElementById('saveBtn');
             saveBtn.disabled = true;
-            saveBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> محفوظ ہو رہا hai...';
+            saveBtn.innerHTML = 'محفوظ ہو رہا hai...';
 
             const photoInput = document.getElementById('userPhoto');
             const file = photoInput.files ? photoInput.files[0] : null;
@@ -720,7 +748,7 @@
                 } catch(e) {}
 
                 // Google Sheets Mein Send
-                if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+                if (GOOGLE_SCRIPT_URL) {
                     fetch(GOOGLE_SCRIPT_URL, {
                         method: 'POST',
                         mode: 'no-cors',
@@ -736,7 +764,7 @@
 
                 document.getElementById('dataForm').reset();
                 saveBtn.disabled = false;
-                saveBtn.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> محفوظ کریں (Save Record)';
+                saveBtn.innerHTML = '<i class="ico ico-save"></i> محفوظ کریں (Save Record)';
 
                 alert('ریکارڈ کامیابی سے محفوظ ہو گیا ہے!');
             });
@@ -850,10 +878,10 @@
                     <div class="infographic-wrapper">
                         <div class="infographic-container">
                             <div class="nodes-col">
-                                <div class="node-box"><div class="node-title-ribbon ribbon-blue"><i class="fa-solid fa-phone"></i> رابطہ / CNIC:</div><div class="node-value">${entry.phone} / ${entry.cnic}</div></div>
-                                <div class="node-box"><div class="node-title-ribbon ribbon-orange"><i class="fa-solid fa-book-quran"></i> دینی تعلیم:</div><div class="node-value">${entry.religiousEdu}</div></div>
-                                <div class="node-box"><div class="node-title-ribbon ribbon-green"><i class="fa-solid fa-graduation-cap"></i> دنیاوی تعلیم:</div><div class="node-value">${entry.secularEdu}</div></div>
-                                <div class="node-box"><div class="node-title-ribbon ribbon-purple"><i class="fa-solid fa-briefcase"></i> ذریعہ معاش:</div><div class="node-value">${entry.profession}</div></div>
+                                <div class="node-box"><div class="node-title-ribbon ribbon-blue"><i class="ico ico-phone"></i> رابطہ / CNIC:</div><div class="node-value">${entry.phone} / ${entry.cnic}</div></div>
+                                <div class="node-box"><div class="node-title-ribbon ribbon-orange"><i class="ico ico-quran"></i> دینی تعلیم:</div><div class="node-value">${entry.religiousEdu}</div></div>
+                                <div class="node-box"><div class="node-title-ribbon ribbon-green"><i class="ico ico-degree"></i> دنیاوی تعلیم:</div><div class="node-value">${entry.secularEdu}</div></div>
+                                <div class="node-box"><div class="node-title-ribbon ribbon-purple"><i class="ico ico-job"></i> ذریعہ معاش:</div><div class="node-value">${entry.profession}</div></div>
                             </div>
                             <div class="center-node">
                                 <div class="top-name-badge">${entry.name}</div>
@@ -862,10 +890,10 @@
                                 <div class="center-photo-frame"><img src="${photoSrc}"></div>
                             </div>
                             <div class="nodes-col">
-                                <div class="node-box"><div class="node-title-ribbon ribbon-blue"><i class="fa-solid fa-star"></i> صلاحیتیں:</div><div class="node-value">${entry.skills}</div></div>
-                                <div class="node-box"><div class="node-title-ribbon ribbon-orange"><i class="fa-solid fa-clock-rotate-left"></i> دینی ماحول میں عرصہ:</div><div class="node-value">${entry.associatedYear}</div></div>
-                                <div class="node-box"><div class="node-title-ribbon ribbon-green"><i class="fa-solid fa-layer-group"></i> سابقہ ذمہ داریاں:</div><div class="node-value">${entry.pastRoles}</div></div>
-                                <div class="node-box"><div class="node-title-ribbon ribbon-purple"><i class="fa-solid fa-location-dot"></i> ایڈریس:</div><div class="node-value">${entry.address}</div></div>
+                                <div class="node-box"><div class="node-title-ribbon ribbon-blue"><i class="ico ico-star"></i> صلاحیتیں:</div><div class="node-value">${entry.skills}</div></div>
+                                <div class="node-box"><div class="node-title-ribbon ribbon-orange"><i class="ico ico-cal"></i> دینی ماحول میں عرصہ:</div><div class="node-value">${entry.associatedYear}</div></div>
+                                <div class="node-box"><div class="node-title-ribbon ribbon-green"><i class="ico ico-history"></i> سابقہ ذمہ داریاں:</div><div class="node-value">${entry.pastRoles}</div></div>
+                                <div class="node-box"><div class="node-title-ribbon ribbon-purple"><i class="ico ico-house"></i> ایڈریس:</div><div class="node-value">${entry.address}</div></div>
                             </div>
                             <div class="bottom-nodes-row">
                                 <div class="bottom-badge">ازدواجی حیثیت: <strong style="color: #8e44ad;">${entry.maritalStatus}</strong></div>
